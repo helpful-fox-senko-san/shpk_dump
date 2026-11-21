@@ -8,17 +8,20 @@ struct ShpkMaterialName {
     const char* name;
 };
 
-inline constexpr std::array<ShpkMaterialName, 72> kShpkMaterialNames = {{
+inline constexpr auto kShpkMaterialNames = std::to_array<ShpkMaterialName>({
     { 0x00A680BCu, "g_ToonSpecIndex" },
     { 0x0BA59580u, "g_MeshRayPhysical" },
     { 0x0DD83E61u, "g_NormalScale1" },
     { 0x11C90091u, "g_WhiteEyeColor" },
     { 0x12C6AC9Fu, "g_TileAlpha" },
     { 0x141722D5u, "g_SpecularColor" },
+    { 0x14D8E13Du, "g_TexAnim" },
+    { 0x1624F841u, "g_TransparencyDistance" },
     { 0x17A52926u, "g_NearClip" },
     { 0x1F264897u, "g_SheenTintRate" },
     { 0x223A3329u, "g_ReflectionPower" },
     { 0x29AC0223u, "g_AlphaThreshold" },
+    { 0x29FA2AC1u, "g_WhitecapColor" },
     { 0x2B5EB116u, "g_OpaqueFactorRadial" },
     { 0x2C2A34DDu, "g_DiffuseColor" },
     { 0x2E60B071u, "g_TileScale" },
@@ -33,6 +36,7 @@ inline constexpr std::array<ShpkMaterialName, 72> kShpkMaterialNames = {{
     { 0x50E36D56u, "g_IrisRingColor" },
     { 0x53E8417Bu, "g_Transparency" },
     { 0x5926A043u, "g_TexU" },
+    { 0x5D26B262u, "g_WhitecapDistance" },
     { 0x623CC4FEu, "g_OutlineColor" },
     { 0x6421DD30u, "g_TileMipBiasOffset" },
     { 0x66C93D3Eu, "g_IrisThickness" },
@@ -51,8 +55,10 @@ inline constexpr std::array<ShpkMaterialName, 72> kShpkMaterialNames = {{
     { 0x8EB9D2A6u, "g_WaveTime" },
     { 0x8F8B0070u, "g_HeightScale" },
     { 0x94B40EEEu, "g_Gradation" },
+    { 0x9BE8354Au, "g_WaveletOffset" },
     { 0x9F42EDA2u, "g_DetailNormalScale" },
     { 0xA320B199u, "g_HeightMapScale" },
+    { 0xA3EA47ACu, "g_WhitecapScale" },
     { 0xA5D02C52u, "g_ColorUVScale" },
     { 0xA9295FEFu, "g_LayerDepth" },
     { 0xB10AF2DAu, "g_DetailColorMipBias" },
@@ -79,4 +85,4 @@ inline constexpr std::array<ShpkMaterialName, 72> kShpkMaterialNames = {{
     { 0xEEF5665Fu, "g_EnvMapPower" },
     { 0xF490F76Eu, "g_SheenAperture" },
     { 0xF769298Eu, "g_DirtScatteringUpper" },
-}};
+});

@@ -8,7 +8,7 @@ struct ShpkCrcName {
     const char* name;
 };
 
-inline constexpr std::array<ShpkCrcName, 297> kShpkKeyNames = {{
+inline constexpr auto kShpkKeyNames = std::to_array<ShpkCrcName>({
     { 0x00C90678u, "TextureDistortion_UvSet2_Table" },
     { 0x0141B939u, "TextureColor2_CalculateColor_Min" },
     { 0x01AD1518u, "TextureColor2_Table" },
@@ -306,4 +306,4 @@ inline constexpr std::array<ShpkCrcName, 297> kShpkKeyNames = {{
     { 0xFD7A2BE9u, "UvSetCount_Table" },
     { 0xFD9D1988u, "TextureColor4_ColorToAlpha_On" },
     { 0xFEDF7617u, "TextureColor3_CalculateColor_Table" },
-}};
+});

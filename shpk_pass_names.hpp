@@ -8,7 +8,7 @@ struct ShpkPassName {
     const char* name;
 };
 
-inline constexpr std::array<ShpkPassName, 15> kShpkPassNames = {{
+inline constexpr auto kShpkPassNames = std::to_array<ShpkPassName>({
     { 0xC5A5389Cu, "PASS_0" },
     { 0xE412A2D4u, "PASS_Z_OPAQUE" },
     { 0x03AC862Eu, "PASS_G_OPAQUE" },
@@ -24,4 +24,4 @@ inline constexpr std::array<ShpkPassName, 15> kShpkPassNames = {{
     { 0xC6BE7BBAu, "PASS_10" },
     { 0x28B01A96u, "PASS_12" },
     { 0xC1D3BFA3u, "PASS_14" },
-}};
+});
